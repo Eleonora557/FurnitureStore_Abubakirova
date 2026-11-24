@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FurnitureStore_Abubakirova.Classes;
 
 namespace FurnitureStore_Abubakirova.Pages
 {
@@ -20,9 +21,23 @@ namespace FurnitureStore_Abubakirova.Pages
     /// </summary>
     public partial class Main : Page
     {
+        public List<Item> items = new List<Item>();
         public Main()
         {
             InitializeComponent();
+
+            items.Add(new Item("Шкаф", 2000,"king(white).png" ));
+            LoadItems();
+        }
+
+        public void LoadItems()
+        {
+            parent.Children.Clear();
+            foreach (Item item in items)
+            {
+                parent.Children.Add(new Elements.Item(item));
+            }
+
         }
     }
 }
