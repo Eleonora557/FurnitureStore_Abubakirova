@@ -19,8 +19,13 @@
                 <Setter Property="BorderBrush" Value="#FFABADB3"/>
             </Style>
         </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="494*"/>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="139*"/>
+        </Grid.ColumnDefinitions>
 
-        <Grid VerticalAlignment="Top" Height="50" Background="#7F000000">
+        <Grid VerticalAlignment="Top" Height="50" Background="#7F000000" Grid.ColumnSpan="3">
             <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="White"/>
@@ -28,22 +33,28 @@
                     <Setter Property="BorderBrush" Value="Black"/>
                 </Style>
             </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="493*"/>
+                <ColumnDefinition Width="161*"/>
+                <ColumnDefinition Width="146*"/>
+            </Grid.ColumnDefinitions>
 
-            <Image Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="10,10,0,0" Source="/Images/vk.png"/>
-            <Image Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="50,10,0,0" Source="/Images/telegramm.png"/>
-            <Label Content="Мебель по карману" Margin="140,5,140,5" Foreground="#FFFFFF" 
+            <Image Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                   Margin="10,0,0,0" Source="/Images/vk.png"/>
+            <Image Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                   Margin="50,0,0,0" Source="/Images/telegramm.png"/>
+            <Label Content="Мебель по карману" Margin="140,5,21,5" Foreground="#FFFFFF" 
                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                    FontSize="20" FontWeight="Bold"/>
-            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="125" Height="25" 
-                    Margin="0,10,10,0" Content="Корзина (0)"/>
+            <Button x:Name="cart" HorizontalAlignment="Center" Width="126" 
+                    Margin="0,10,0,0" Content="Корзина (0)" Grid.Column="2" Height="25" VerticalAlignment="Top"/>
         </Grid>
 
-        <ScrollViewer Margin="5,55,5,5" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Margin="5,55,5,50" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="3">
             <StackPanel x:Name="parent" Orientation="Horizontal">
-                
+
             </StackPanel>
         </ScrollViewer>
+        <Button Content="Категории" Margin="14,13,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1"  Width="123" HorizontalAlignment="Left"/>
     </Grid>
 </Page>

@@ -11,12 +11,14 @@ namespace FurnitureStore_Abubakirova.Classes
         public string name {  get; set; }
         public int price {  get; set; }
         public string src { get; set; }
+        public string category {  get; set; }
 
-        public Item(string name, int price, string src)
+        public Item(string name, int price, string src,string category)
         {
             this.name = name;
             this.price = price;
             this.src = src;
+            this.category = category;
         }
     }
 }

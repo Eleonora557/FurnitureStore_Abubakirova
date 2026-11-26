@@ -20,8 +20,10 @@ namespace FurnitureStore_Abubakirova
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow mainWindow;
         public MainWindow()
         {
+            mainWindow = this;
             InitializeComponent();
             OpenPage(new Pages.Main());
         }

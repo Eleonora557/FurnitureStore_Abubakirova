@@ -16,7 +16,7 @@
             <Button Content="-" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="30" Height="25" Margin="10,0,0,38" />
             <TextBox Text="0" Height="25" Margin="45,0,45,38" VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             <Button Content="+" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="30" Height="25" Margin="0,0,10,38" />
-            <Button Content="В КОРЗИНУ"  VerticalAlignment="Bottom"  Height="25" Margin="10,0,10,10" />
+            <Button Content="В КОРЗИНУ"  VerticalAlignment="Bottom"  Height="25" Margin="10,0,10,10" Click="Button_Click" />
 
 
         </Grid>
